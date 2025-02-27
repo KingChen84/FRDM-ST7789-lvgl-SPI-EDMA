@@ -1,0 +1,7 @@
+../generated/events_init.c:19:13:screen_btn_start_lin_event_handler	24	static
+../generated/events_init.c:34:13:screen_ddlist_slave_bitrate_event_handler	24	static
+../generated/events_init.c:48:13:screen_btn_stop_lin_event_handler	24	static
+../generated/events_init.c:63:13:screen_btn_start_canfd_event_handler	24	static
+../generated/events_init.c:77:13:screen_btn_stop_canfd_event_handler	24	static
+../generated/events_init.c:91:6:events_init_screen	16	static
+../generated/events_init.c:101:6:events_init	16	static

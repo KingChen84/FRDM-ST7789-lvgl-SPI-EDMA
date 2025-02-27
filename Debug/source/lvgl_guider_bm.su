@@ -1,0 +1,9 @@
+D:\MCUXpresso-Project\frdmmcxn947_lvgl_guider_ST7789\CMSIS/core_cm33.h:2587:22:__NVIC_SetPriority	16	static
+D:\MCUXpresso-Project\frdmmcxn947_lvgl_guider_ST7789\CMSIS/core_cm33.h:3140:26:SysTick_Config	16	static
+D:\MCUXpresso-Project\frdmmcxn947_lvgl_guider_ST7789\drivers/fsl_clock.h:1394:20:CLOCK_EnableClock	24	static
+D:\MCUXpresso-Project\frdmmcxn947_lvgl_guider_ST7789\drivers/fsl_gpio.h:329:20:GPIO_PinWrite	24	static
+D:\MCUXpresso-Project\frdmmcxn947_lvgl_guider_ST7789\lvgl\lvgl/src/lv_api_map.h:35:51:lv_task_handler	8	static
+../source/lvgl_guider_bm.c:78:13:i2c_release_bus_delay	8	static
+../source/lvgl_guider_bm.c:136:5:main	8	static
+../source/lvgl_guider_bm.c:188:13:DEMO_SetupTick	8	static
+../source/lvgl_guider_bm.c:198:6:SysTick_Handler	8	static
