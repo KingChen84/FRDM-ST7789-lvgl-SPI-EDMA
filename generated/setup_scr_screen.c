@@ -90,14 +90,15 @@ void setup_scr_screen(lv_ui *ui)
 
     //Write codes screen_btn_start_lin
     ui->screen_btn_start_lin = lv_btn_create(ui->screen_tabview_1_tab_1);
+    lv_obj_add_flag(ui->screen_btn_start_lin, LV_OBJ_FLAG_CHECKABLE);
     ui->screen_btn_start_lin_label = lv_label_create(ui->screen_btn_start_lin);
-    lv_label_set_text(ui->screen_btn_start_lin_label, "Start Log");
+    lv_label_set_text(ui->screen_btn_start_lin_label, "Start");
     lv_label_set_long_mode(ui->screen_btn_start_lin_label, LV_LABEL_LONG_WRAP);
     lv_obj_align(ui->screen_btn_start_lin_label, LV_ALIGN_CENTER, 0, 0);
     lv_obj_set_style_pad_all(ui->screen_btn_start_lin, 0, LV_STATE_DEFAULT);
     lv_obj_set_width(ui->screen_btn_start_lin_label, LV_PCT(100));
-    lv_obj_set_pos(ui->screen_btn_start_lin, 42, 94);
-    lv_obj_set_size(ui->screen_btn_start_lin, 120, 40);
+    lv_obj_set_pos(ui->screen_btn_start_lin, 40, 95);
+    lv_obj_set_size(ui->screen_btn_start_lin, 120, 45);
     lv_obj_add_flag(ui->screen_btn_start_lin, LV_OBJ_FLAG_CLICKABLE);
 
     //Write style for screen_btn_start_lin, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
@@ -180,14 +181,15 @@ void setup_scr_screen(lv_ui *ui)
 
     //Write codes screen_btn_stop_lin
     ui->screen_btn_stop_lin = lv_btn_create(ui->screen_tabview_1_tab_1);
+    lv_obj_add_flag(ui->screen_btn_stop_lin, LV_OBJ_FLAG_CHECKABLE);
     ui->screen_btn_stop_lin_label = lv_label_create(ui->screen_btn_stop_lin);
-    lv_label_set_text(ui->screen_btn_stop_lin_label, "Stop Log");
+    lv_label_set_text(ui->screen_btn_stop_lin_label, "Stop");
     lv_label_set_long_mode(ui->screen_btn_stop_lin_label, LV_LABEL_LONG_WRAP);
     lv_obj_align(ui->screen_btn_stop_lin_label, LV_ALIGN_CENTER, 0, 0);
     lv_obj_set_style_pad_all(ui->screen_btn_stop_lin, 0, LV_STATE_DEFAULT);
     lv_obj_set_width(ui->screen_btn_stop_lin_label, LV_PCT(100));
-    lv_obj_set_pos(ui->screen_btn_stop_lin, 40, 142);
-    lv_obj_set_size(ui->screen_btn_stop_lin, 120, 40);
+    lv_obj_set_pos(ui->screen_btn_stop_lin, 40, 150);
+    lv_obj_set_size(ui->screen_btn_stop_lin, 120, 45);
 
     //Write style for screen_btn_stop_lin, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
     lv_obj_set_style_bg_opa(ui->screen_btn_stop_lin, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
@@ -226,9 +228,9 @@ void setup_scr_screen(lv_ui *ui)
 
     //Write codes screen_label_lin
     ui->screen_label_lin = lv_label_create(ui->screen_tabview_1_tab_1);
-    lv_label_set_text(ui->screen_label_lin, "Status");
+    lv_label_set_text(ui->screen_label_lin, "");
     lv_label_set_long_mode(ui->screen_label_lin, LV_LABEL_LONG_WRAP);
-    lv_obj_set_pos(ui->screen_label_lin, 40, 64);
+    lv_obj_set_pos(ui->screen_label_lin, 39, 60);
     lv_obj_set_size(ui->screen_label_lin, 124, 21);
 
     //Write style for screen_label_lin, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
@@ -417,7 +419,7 @@ void setup_scr_screen(lv_ui *ui)
     lv_obj_align(ui->screen_btn_stop_canfd_label, LV_ALIGN_CENTER, 0, 0);
     lv_obj_set_style_pad_all(ui->screen_btn_stop_canfd, 0, LV_STATE_DEFAULT);
     lv_obj_set_width(ui->screen_btn_stop_canfd_label, LV_PCT(100));
-    lv_obj_set_pos(ui->screen_btn_stop_canfd, 110, 133);
+    lv_obj_set_pos(ui->screen_btn_stop_canfd, 110, 134);
     lv_obj_set_size(ui->screen_btn_stop_canfd, 84, 35);
 
     //Write style for screen_btn_stop_canfd, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
@@ -436,8 +438,8 @@ void setup_scr_screen(lv_ui *ui)
     ui->screen_label_normal_canfd = lv_label_create(ui->screen_tabview_1_tab_2);
     lv_label_set_text(ui->screen_label_normal_canfd, "Normal Bitrate");
     lv_label_set_long_mode(ui->screen_label_normal_canfd, LV_LABEL_LONG_WRAP);
-    lv_obj_set_pos(ui->screen_label_normal_canfd, -4, 16);
-    lv_obj_set_size(ui->screen_label_normal_canfd, 106, 18);
+    lv_obj_set_pos(ui->screen_label_normal_canfd, -1, 18);
+    lv_obj_set_size(ui->screen_label_normal_canfd, 103, 18);
 
     //Write style for screen_label_normal_canfd, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
     lv_obj_set_style_border_width(ui->screen_label_normal_canfd, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
@@ -459,7 +461,7 @@ void setup_scr_screen(lv_ui *ui)
     ui->screen_label_datacanfd = lv_label_create(ui->screen_tabview_1_tab_2);
     lv_label_set_text(ui->screen_label_datacanfd, "Data Bitrate");
     lv_label_set_long_mode(ui->screen_label_datacanfd, LV_LABEL_LONG_WRAP);
-    lv_obj_set_pos(ui->screen_label_datacanfd, 106, 16);
+    lv_obj_set_pos(ui->screen_label_datacanfd, 106, 18);
     lv_obj_set_size(ui->screen_label_datacanfd, 98, 18);
 
     //Write style for screen_label_datacanfd, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
@@ -477,6 +479,86 @@ void setup_scr_screen(lv_ui *ui)
     lv_obj_set_style_pad_bottom(ui->screen_label_datacanfd, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_pad_left(ui->screen_label_datacanfd, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_shadow_width(ui->screen_label_datacanfd, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes screen_label_canfd_status
+    ui->screen_label_canfd_status = lv_label_create(ui->screen_tabview_1_tab_2);
+    lv_label_set_text(ui->screen_label_canfd_status, "");
+    lv_label_set_long_mode(ui->screen_label_canfd_status, LV_LABEL_LONG_WRAP);
+    lv_obj_set_pos(ui->screen_label_canfd_status, 32, 92);
+    lv_obj_set_size(ui->screen_label_canfd_status, 140, 21);
+
+    //Write style for screen_label_canfd_status, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->screen_label_canfd_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->screen_label_canfd_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->screen_label_canfd_status, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->screen_label_canfd_status, &lv_font_montserratMedium_13, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->screen_label_canfd_status, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->screen_label_canfd_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->screen_label_canfd_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->screen_label_canfd_status, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->screen_label_canfd_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->screen_label_canfd_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->screen_label_canfd_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->screen_label_canfd_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->screen_label_canfd_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->screen_label_canfd_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes screen_sw_brs
+    ui->screen_sw_brs = lv_switch_create(ui->screen_tabview_1_tab_2);
+    lv_obj_set_pos(ui->screen_sw_brs, 84, 177);
+    lv_obj_set_size(ui->screen_sw_brs, 40, 22);
+
+    //Write style for screen_sw_brs, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_bg_opa(ui->screen_sw_brs, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->screen_sw_brs, lv_color_hex(0xe6e2e6), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->screen_sw_brs, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_width(ui->screen_sw_brs, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->screen_sw_brs, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->screen_sw_brs, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write style for screen_sw_brs, Part: LV_PART_MAIN, State: LV_STATE_FOCUSED.
+    lv_obj_set_style_bg_opa(ui->screen_sw_brs, 255, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_color(ui->screen_sw_brs, lv_color_hex(0xe6e2e6), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_grad_dir(ui->screen_sw_brs, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_width(ui->screen_sw_brs, 0, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_radius(ui->screen_sw_brs, 10, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_shadow_width(ui->screen_sw_brs, 0, LV_PART_MAIN|LV_STATE_FOCUSED);
+
+    //Write style for screen_sw_brs, Part: LV_PART_INDICATOR, State: LV_STATE_CHECKED.
+    lv_obj_set_style_bg_opa(ui->screen_sw_brs, 255, LV_PART_INDICATOR|LV_STATE_CHECKED);
+    lv_obj_set_style_bg_color(ui->screen_sw_brs, lv_color_hex(0x2195f6), LV_PART_INDICATOR|LV_STATE_CHECKED);
+    lv_obj_set_style_bg_grad_dir(ui->screen_sw_brs, LV_GRAD_DIR_NONE, LV_PART_INDICATOR|LV_STATE_CHECKED);
+    lv_obj_set_style_border_width(ui->screen_sw_brs, 0, LV_PART_INDICATOR|LV_STATE_CHECKED);
+
+    //Write style for screen_sw_brs, Part: LV_PART_KNOB, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_bg_opa(ui->screen_sw_brs, 255, LV_PART_KNOB|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->screen_sw_brs, lv_color_hex(0xffffff), LV_PART_KNOB|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->screen_sw_brs, LV_GRAD_DIR_NONE, LV_PART_KNOB|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_width(ui->screen_sw_brs, 0, LV_PART_KNOB|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->screen_sw_brs, 10, LV_PART_KNOB|LV_STATE_DEFAULT);
+
+    //Write codes screen_label_BRS
+    ui->screen_label_BRS = lv_label_create(ui->screen_tabview_1_tab_2);
+    lv_label_set_text(ui->screen_label_BRS, "BRS:");
+    lv_label_set_long_mode(ui->screen_label_BRS, LV_LABEL_LONG_WRAP);
+    lv_obj_set_pos(ui->screen_label_BRS, 28, 181);
+    lv_obj_set_size(ui->screen_label_BRS, 50, 19);
+
+    //Write style for screen_label_BRS, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->screen_label_BRS, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->screen_label_BRS, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->screen_label_BRS, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->screen_label_BRS, &lv_font_montserratMedium_13, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->screen_label_BRS, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->screen_label_BRS, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->screen_label_BRS, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->screen_label_BRS, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->screen_label_BRS, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->screen_label_BRS, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->screen_label_BRS, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->screen_label_BRS, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->screen_label_BRS, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->screen_label_BRS, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
 
     //The custom code of screen.
 

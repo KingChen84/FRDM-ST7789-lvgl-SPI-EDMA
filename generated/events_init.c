@@ -67,6 +67,7 @@ static void screen_btn_start_canfd_event_handler (lv_event_t *e)
     case LV_EVENT_CLICKED:
     {
 
+        lv_label_set_text(guider_ui.screen_label_canfd_status, "Start CAN log...");
         break;
     }
     default:
@@ -80,6 +81,30 @@ static void screen_btn_stop_canfd_event_handler (lv_event_t *e)
     switch (code) {
     case LV_EVENT_CLICKED:
     {
+
+        lv_label_set_text(guider_ui.screen_label_canfd_status, "Stop CAN log");
+        break;
+    }
+    default:
+        break;
+    }
+}
+
+static void screen_sw_brs_event_handler (lv_event_t *e)
+{
+    lv_event_code_t code = lv_event_get_code(e);
+    switch (code) {
+    case LV_EVENT_CLICKED:
+    {
+        lv_obj_t * status_obj = lv_event_get_target(e);
+        int status = lv_obj_has_state(status_obj, LV_STATE_CHECKED) ? true : false;
+
+        break;
+    }
+    case LV_EVENT_VALUE_CHANGED:
+    {
+        lv_obj_t * status_obj = lv_event_get_target(e);
+        int status = lv_obj_has_state(status_obj, LV_STATE_CHECKED) ? true : false;
 
         break;
     }
@@ -95,6 +120,7 @@ void events_init_screen (lv_ui *ui)
     lv_obj_add_event_cb(ui->screen_btn_stop_lin, screen_btn_stop_lin_event_handler, LV_EVENT_ALL, ui);
     lv_obj_add_event_cb(ui->screen_btn_start_canfd, screen_btn_start_canfd_event_handler, LV_EVENT_ALL, ui);
     lv_obj_add_event_cb(ui->screen_btn_stop_canfd, screen_btn_stop_canfd_event_handler, LV_EVENT_ALL, ui);
+    lv_obj_add_event_cb(ui->screen_sw_brs, screen_sw_brs_event_handler, LV_EVENT_ALL, ui);
 }
 
 

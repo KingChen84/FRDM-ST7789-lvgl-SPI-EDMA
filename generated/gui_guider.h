@@ -38,6 +38,9 @@ typedef struct
 	lv_obj_t *screen_btn_stop_canfd_label;
 	lv_obj_t *screen_label_normal_canfd;
 	lv_obj_t *screen_label_datacanfd;
+	lv_obj_t *screen_label_canfd_status;
+	lv_obj_t *screen_sw_brs;
+	lv_obj_t *screen_label_BRS;
 }lv_ui;
 
 typedef void (*ui_setup_scr_t)(lv_ui * ui);
